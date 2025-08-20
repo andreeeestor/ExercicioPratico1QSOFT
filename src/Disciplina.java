@@ -1,5 +1,3 @@
-import java.security.PublicKey;
-
 public class Disciplina {
     public String name;
     private int workload;
