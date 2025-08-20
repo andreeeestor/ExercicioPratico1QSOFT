@@ -1,3 +1,5 @@
+package main.java;
+
 public class Aluno {
     private String name;
     private int age;
@@ -35,6 +37,6 @@ public class Aluno {
 
     public void updateName(String newName) {
         setName(newName);
-        System.out.println("Aluno atualizado: " + newName);
+        System.out.println("main.java.Aluno atualizado: " + newName);
     }
 }

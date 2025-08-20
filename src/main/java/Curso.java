@@ -1,3 +1,5 @@
+package main.java;
+
 import java.util.ArrayList;
 
 public class Curso {
@@ -37,6 +39,6 @@ public class Curso {
 
     public void updateName(String newName) {
         setName(newName);
-        System.out.println("Curso atualizado: " + newName);
+        System.out.println("main.java.Curso atualizado: " + newName);
     }
 }

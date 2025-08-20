@@ -1,3 +1,5 @@
+package main.java;
+
 public class Disciplina {
     public String name;
     private int workload;

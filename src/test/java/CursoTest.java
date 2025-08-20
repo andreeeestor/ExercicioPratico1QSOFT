@@ -1,3 +1,8 @@
+package test.java;
+
+import main.java.Curso;
+import main.java.Disciplina;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -17,17 +22,17 @@ public class CursoTest {
     @Test
     @DisplayName("Teste de criação de curso")
     public void testCriarCurso() {
-        assertEquals("Ciência da Computação", curso.getName());
-        assertEquals("Matutino", curso.getTime());
-        assertTrue(curso.getDisciplines().isEmpty());
+        Assertions.assertEquals("Ciência da Computação", curso.getName());
+        Assertions.assertEquals("Matutino", curso.getTime());
+        Assertions.assertTrue(curso.getDisciplines().isEmpty());
     }
     
     @Test
     @DisplayName("Teste de adição de disciplina")
     public void testAddDiscipline() {
         curso.addDiscipline(disciplina);
-        assertEquals(1, curso.getDisciplines().size());
-        assertTrue(curso.getDisciplines().contains(disciplina));
+        Assertions.assertEquals(1, curso.getDisciplines().size());
+        Assertions.assertTrue(curso.getDisciplines().contains(disciplina));
     }
     
     @Test
@@ -38,6 +43,6 @@ public class CursoTest {
         curso.addDiscipline(disciplina);
         curso.addDiscipline(disciplina2);
         
-        assertEquals(2, curso.getDisciplines().size());
+        Assertions.assertEquals(2, curso.getDisciplines().size());
     }
 }

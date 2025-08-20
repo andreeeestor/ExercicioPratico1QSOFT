@@ -1,3 +1,5 @@
+package main.java;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -42,10 +44,10 @@ public class Gerenciamento {
     }
 
     public static void registerStudent() {
-        System.out.print("Digite o nome do Aluno: ");
+        System.out.print("Digite o nome do main.java.Aluno: ");
         String name = scanner.nextLine();
 
-        System.out.print("Digite a idade do Aluno: ");
+        System.out.print("Digite a idade do main.java.Aluno: ");
         int age = scanner.nextInt();
         scanner.nextLine();
 
@@ -58,7 +60,7 @@ public class Gerenciamento {
         Curso selectedCourse = courses.get(courseOption - 1);
 
         students.add(new Aluno(name, age, selectedCourse));
-        System.out.println("Aluno registrado com sucesso!");
+        System.out.println("main.java.Aluno registrado com sucesso!");
     }
 
     public static void viewStudent() {
@@ -69,15 +71,15 @@ public class Gerenciamento {
             if (student.getName().equalsIgnoreCase(name)) {
                 Curso c = student.getCourse();
 
-                System.out.println("Aluno encontrado: " + student.getName() + " - " + student.getAge());
-                System.out.println("Curso: " + c.getName());
+                System.out.println("main.java.Aluno encontrado: " + student.getName() + " - " + student.getAge());
+                System.out.println("main.java.Curso: " + c.getName());
 
                 found = true;
                 break;
             }
         }
         if (!found) {
-            System.out.println("Aluno não encontrado.");
+            System.out.println("main.java.Aluno não encontrado.");
         }
     }
 
@@ -86,9 +88,9 @@ public class Gerenciamento {
         String name = scanner.nextLine();
         boolean removed = students.removeIf(student -> student.getName().equalsIgnoreCase(name));
         if (removed) {
-            System.out.println("Aluno removido com sucesso!");
+            System.out.println("main.java.Aluno removido com sucesso!");
         } else {
-            System.out.println("Aluno não encontrado.");
+            System.out.println("main.java.Aluno não encontrado.");
         }
     }
 
@@ -106,7 +108,7 @@ public class Gerenciamento {
             }
         }
         if (!found) {
-            System.out.println("Aluno não encontrado.");
+            System.out.println("main.java.Aluno não encontrado.");
         }
     }
 
@@ -155,7 +157,7 @@ public class Gerenciamento {
         double grade = Double.parseDouble(scanner.nextLine());
 
         disciplines.add(new Disciplina(name, workload, grade));
-        System.out.println("Disciplina cadastrada com sucesso!");
+        System.out.println("main.java.Disciplina cadastrada com sucesso!");
     }
 
     public static void viewDiscipline() {
@@ -164,13 +166,13 @@ public class Gerenciamento {
         boolean found = false;
         for (Disciplina discipline : disciplines) {
             if (discipline.getName().equalsIgnoreCase(name)) {
-                System.out.println("Disciplina encontrada: " + discipline.getName());
+                System.out.println("main.java.Disciplina encontrada: " + discipline.getName());
                 found = true;
                 break;
             }
         }
         if (!found) {
-            System.out.println("Disciplina não econtrada.");
+            System.out.println("main.java.Disciplina não econtrada.");
         }
     }
 
@@ -179,9 +181,9 @@ public class Gerenciamento {
         String name = scanner.nextLine();
         boolean removed = disciplines.removeIf(discipline -> discipline.getName().equalsIgnoreCase(name));
         if (removed) {
-            System.out.println("Disciplina removida com sucesso!");
+            System.out.println("main.java.Disciplina removida com sucesso!");
         } else {
-            System.out.println("Disciplina não encontrada.");
+            System.out.println("main.java.Disciplina não encontrada.");
         }
     }
 
@@ -199,7 +201,7 @@ public class Gerenciamento {
             }
         }
         if (!found) {
-            System.out.println("Disciplina não encontrada.");
+            System.out.println("main.java.Disciplina não encontrada.");
         }
     }
 
@@ -247,7 +249,7 @@ public class Gerenciamento {
         Curso newCourse = new Curso(name, time);
         courses.add(newCourse);
 
-        System.out.println("Curso cadastrado com sucesso!");
+        System.out.println("main.java.Curso cadastrado com sucesso!");
 
         int addDiscipline;
         do {
@@ -282,7 +284,7 @@ public class Gerenciamento {
         boolean found = false;
         for (Curso course : courses) {
             if (course.getName().equalsIgnoreCase(name)) {
-                System.out.println("Curso encontrado: " + course.getName());
+                System.out.println("main.java.Curso encontrado: " + course.getName());
                 System.out.println("Disciplinas");
                 for (Disciplina d : course.getDisciplines()) {
                     System.out.println("- " + d.name);
@@ -292,7 +294,7 @@ public class Gerenciamento {
             }
         }
         if (!found) {
-            System.out.println("Curso não encontrado.");
+            System.out.println("main.java.Curso não encontrado.");
         }
     }
 
@@ -301,9 +303,9 @@ public class Gerenciamento {
         String name = scanner.nextLine();
         boolean removed = courses.removeIf(course -> course.getName().equalsIgnoreCase(name));
         if (removed) {
-            System.out.println("Curso removido com sucesso!");
+            System.out.println("main.java.Curso removido com sucesso!");
         } else {
-            System.out.println("Curso não encontrado.");
+            System.out.println("main.java.Curso não encontrado.");
         }
     }
 
@@ -321,7 +323,7 @@ public class Gerenciamento {
             }
         }
         if (!found) {
-            System.out.println("Curso não encontrado.");
+            System.out.println("main.java.Curso não encontrado.");
         }
     }
 }
